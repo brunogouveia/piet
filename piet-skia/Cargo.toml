@@ -1,0 +1,18 @@
+[package]
+name = "piet-skia"
+version = "0.0.9"
+authors = ["Raph Levien <raph.levien@gmail.com>"]
+description = "Skia backend for piet 2D graphics abstraction."
+license = "MIT/Apache-2.0"
+repository = "https://github.com/linebender/piet"
+edition = "2018"
+keywords = ["graphics", "2d"]
+categories = ["rendering::graphics-api"]
+
+[dependencies]
+piet = { version = "0.0.9", path = "../piet" }
+skia-safe = "0.27.0"
+unicode-segmentation = "1.3.0"
+
+[dev-dependencies]
+piet-test = { version = "0.0.9", path = "../piet-test" }
