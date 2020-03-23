@@ -204,7 +204,7 @@ where
     );
 
     /// Returns the transformations currently applied to the context.
-    fn current_transform(&self) -> Affine;
+    fn current_transform(&mut self) -> Affine;
 }
 
 /// A trait for various types that can be used as brushes. These include

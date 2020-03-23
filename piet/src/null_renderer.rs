@@ -127,7 +127,7 @@ impl RenderContext for NullRenderContext {
     ) {
     }
 
-    fn current_transform(&self) -> Affine {
+    fn current_transform(&mut self) -> Affine {
         Affine::default()
     }
 }
