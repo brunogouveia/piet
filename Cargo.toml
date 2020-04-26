@@ -4,6 +4,7 @@ members = [
     "piet",
     "piet-cairo",
     "piet-common",
+    "piet-core-graphics",
     "piet-direct2d",
     "piet-test",
     "piet-web",
@@ -14,6 +15,7 @@ members = [
 default-members = [
     "piet",
     "piet-common",
+    "piet-core-graphics",
     "piet-test",
     "piet-web",
     "piet-web/examples/basic",

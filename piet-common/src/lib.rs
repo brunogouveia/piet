@@ -30,9 +30,12 @@ pub use piet::*;
 pub use piet::kurbo;
 
 cfg_if::cfg_if! {
-    // if we have explicitly asked for cairo *or* we are not wasm, web, or windows:
-    if #[cfg(any(feature = "cairo", not(any(target_arch = "wasm32", feature="web", target_os = "windows"))))] {
+    // if we have explicitly asked for cairo *or* we are not wasm, web, windows or macos:
+    if #[cfg(any(feature = "cairo", not(any(target_arch = "wasm32", feature="web", target_os = "windows", target_os = "macos"))))] {
         #[path = "cairo_back.rs"]
+        mod backend;
+    } else if #[cfg(target_os = "macos")] {
+        #[path = "core_graphics_back.rs"]
         mod backend;
     } else if #[cfg(target_os = "windows")] {
         #[path = "direct2d_back.rs"]

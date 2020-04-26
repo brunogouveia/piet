@@ -9,6 +9,7 @@ mod picture_2;
 mod picture_3;
 mod picture_4;
 mod picture_5;
+mod picture_6;
 
 use crate::picture_0::draw as draw_picture_0;
 use crate::picture_1::draw as draw_picture_1;
@@ -16,6 +17,7 @@ use crate::picture_2::draw as draw_picture_2;
 use crate::picture_3::draw as draw_picture_3;
 use crate::picture_4::draw as draw_picture_4;
 use crate::picture_5::draw as draw_picture_5;
+use crate::picture_6::draw as draw_picture_6;
 
 /// Draw a test picture, by number.
 ///
@@ -29,6 +31,7 @@ pub fn draw_test_picture(rc: &mut impl RenderContext, number: usize) -> Result<(
         3 => draw_picture_3(rc),
         4 => draw_picture_4(rc),
         5 => draw_picture_5(rc),
+        6 => draw_picture_6(rc),
         _ => {
             eprintln!(
                 "Don't have test picture {} yet. Why don't you make it?",

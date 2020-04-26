@@ -128,7 +128,7 @@ pub trait TextLayout: Clone {
     /// In directwrite, if a text position is not at code point boundary, this method will panic.
     /// Cairo and web are more lenient and may not panic.
     ///
-    /// For text position that is greater than `text.len()`, web/cairo will return the
+    /// For text position that is greater than `text.len()`, web/cairo/core graphics will return the
     /// [`HitTestTextPosition`][] as if `text_position == text.len()`. In directwrite, the method will
     /// panic, as the text position is out of bounds.
     ///
